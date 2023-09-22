@@ -45,5 +45,6 @@ defmodule MultitenancyWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
+  plug MultitenancyWeb.Plugs.Subdomain
   plug MultitenancyWeb.Router
 end

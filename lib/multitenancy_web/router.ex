@@ -7,6 +7,10 @@ defmodule MultitenancyWeb.Router do
 
   scope "/api", MultitenancyWeb do
     pipe_through :api
+
+    get "/teste", TesteController, :show
+
+    get "/products", ProductsController, :index
   end
 
   # Enable LiveDashboard and Swoosh mailbox preview in development
